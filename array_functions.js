@@ -6,7 +6,7 @@ const addToAllElements = (array, num) => {
 	for (let i = 0; i < array.length; i++) {
 		let element = array[i];
 
-		if(element==2){
+		if (element == 2) {
 			continue;
 		}
 
@@ -32,7 +32,7 @@ let allEvenNumbersInArray = myArr.filter(isEvenNumber);
 let sortedArray = myArr.sort();
 
 let reduceAdd = (total, num) => {
-	
+
 	console.log("total ===> ", total);
 	console.log("num ===> ", num);
 	console.log();
@@ -47,3 +47,59 @@ console.log(myArr);
 // console.log(allEvenNumbersInArray);
 // console.log(sortedArray);
 console.log(reduced);
+
+
+
+let users = [
+	{}
+];
+
+const createUser = (newUserBody) => {
+	users.push(newUserBody);
+}
+
+const readUser = (id) => {
+	let callback = (user) => {
+		return user.id == id ? true : false;
+	}
+
+	return users.find(callback)
+}
+
+/*
+
+let updateBody = {
+	gender: "F"
+}
+
+*/
+const updateUser = (id, updateBody) => {
+	let callback = (user, index) => {
+		if (user.id == id) {
+			let updatedUser = {
+				...user[index],
+				...updateBody
+			}
+
+			user[index] = updatedUser;
+			return true;
+		}
+		else
+			return false;
+	}
+
+	users.find(callback)
+}
+
+const deleteUser = (id) => {
+	let callback = (user, index) => {
+		if (user.id == id) {
+			users.splice(index, 1)
+			return true;
+		}
+		else
+			return false;
+	}
+
+	users.find(callback)
+}
