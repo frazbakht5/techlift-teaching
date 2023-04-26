@@ -100,6 +100,6 @@ const deleteUser = (id) => {
 		else
 			return false;
 	}
-
+	
 	users.find(callback)
 }
