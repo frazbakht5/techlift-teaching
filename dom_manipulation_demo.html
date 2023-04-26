@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Counter</title>
+  </head>
+  <body>
+    <h1>Click counter</h1>
+    <p>
+      This page counts the number of time the "Click me" button is clicked by
+      the user.
+    </p>
+    <h2 id="counter">0</h2>
+    <button onclick="myFunction()">Click me!</button>
+    <button onclick="reset()">Reset</button>
+
+    <script>
+      function myFunction() {
+        let previousValue = parseInt(
+          document.getElementById("counter").innerHTML
+        );
+        console.log("previousValue ===> ", previousValue);
+        let newValue = previousValue + 1;
+        document.getElementById("counter").innerHTML = newValue;
+      }
+      function reset() {
+        document.getElementById("counter").innerHTML = 0;
+      }
+    </script>
+  </body>
+</html>
