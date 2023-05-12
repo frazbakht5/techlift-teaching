@@ -1,0 +1,20 @@
+{
+  "name": "techlift-node-demo",
+  "version": "1.0.0",
+  "description": "This is a demo for classes of techlift MERN stack classes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon ./index.js localhost 5000"
+  },
+  "author": "Fraz Bakht",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "loadash": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
